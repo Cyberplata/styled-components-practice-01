@@ -1,29 +1,43 @@
 import React from 'react';
 import './App.css';
 import styled from "styled-components";
-// import imgP from './img/Rectangle1.png'
+import mainPicture from './img/Rectangle.png'
 
 function App() {
     return (
         <div className="App">
             <Card>
-                <StyledImg></StyledImg>
-                <StyledTitle>Headline</StyledTitle>
+                <StyledImg><img src={mainPicture} alt="mainPicture"/></StyledImg>
+                {/*<StyledTitle>Headline</StyledTitle>*/}
+                <MainContent>
+                    <h1>Headline</h1>
+                </MainContent>
+                <StyledText>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in
+                    venen.</StyledText>
+                <ContentBtn>
+                    <StyledBtn><p>See more</p></StyledBtn>
+                    <SuperButton><p>Save</p></SuperButton>
+                </ContentBtn>
             </Card>
+
         </div>
     );
 }
 
 const Card = styled.div`
-    //display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: flex-start;
     width: 300px;
     height: 350px;
     border-radius: 15px;
     background: #FFF;
     box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.10);
-    
+    margin: 0 auto;
+    padding: 10px 10px 170px 10px;
+    //gap: 10px;
+
     button {
         cursor: pointer;
     }
@@ -32,20 +46,92 @@ const Card = styled.div`
 const StyledImg = styled.div`
     width: 280px;
     height: 170px;
-    flex-shrink: 1;
+    //flex-shrink: 1;
     border-radius: 10px;
-    background: url('https://s3-alpha-sig.figma.com/img/295b/9b3e/0cbd17e4381497547009ce81acc4eee3?Expires=1706486400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QsYefiKjkz1ssan~3dzM8Zyzr~3ZEtaVH35bTrHLrx7AaGaBa-xogHvUkrxS9hkZO-9Q8r-~XsLvQHAxz3U1SkSxcqwgtecT33x6m~pOuLpKveImOj4-ylPvcdW~NbGXV55BSAzbwHgBMF7zYsSxbpwOsZZ9KuI50QYnMJ9w7Nkcprjj6oG6fb3A4vXL9sPYoF12Qjjb45hzpC-j1WJ8rf23kioguKV9LyIJ71k~I972aCgqf3Culf6JU6rK-VGsuN2luxGZD24CkoyhfT3Q8wcN5grQ1lqXV96HwyAv4uP348y8LRrT7GLOeCCx8qayXmYDEAlwrKuIqly9xXpLXw__');
+    justify-content: center;
 `
 
-const StyledTitle = styled.h1`
-    display: flex;
-    color: #0c0c0c;
-    font-family: Inter;
-    font-size: 16px;
+const MainContent = styled.div`
+    //display: flex;
+    //justify-content: flex-start;
+
+    h1 {
+        color: #0c0c0c;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 10px;
+    }
+`
+
+// const StyledTitle = styled.h1`
+//     display: flex;
+//     color: #0c0c0c;
+//     font-family: Inter, serif;
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: normal;
+//     margin: 20px;
+//     //justify-content: flex-start;
+// `
+
+const StyledText = styled.p`
+    width: 260px;
+    color: #ABB3BA;
+    font-family: Inter, serif;
+    font-size: 12px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding-top: 10px;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+    margin: 10px;
+`
+
+const ContentBtn = styled.div`
+    display: flex;
+    margin-bottom: 22px;
+`
+
+const StyledBtn = styled.button`
+    //display: flex;
+    //flex-direction: column;
+    border: none;
+    color: #fff;
+    width: 86px;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: #4e71fe;
+    border-radius: 5px;
+    margin: 10px;
+    //gap: 12px;
+
+    p {
+        color: #FFF;
+        font-family: Inter, serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 200% */
+    }
+`
+
+const SuperButton = styled(StyledBtn)`
+    border: 2px solid #4E71FE;
+    background-color: #fff;
+    color: #4e71fe;
+    margin-left: 12px;
+
+    p {
+        color: #4E71FE;
+
+        font-family: Inter, serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 200% */
+    }
 `
 
 export default App;
