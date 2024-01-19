@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import mainPicture from './img/Rectangle.png'
+import {StyledImg} from "./StyledImg";
 
 function App() {
     return (
@@ -33,7 +34,7 @@ const Card = styled.div`
     height: 350px;
     border-radius: 15px;
     background: #FFF;
-    box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.10);
     margin: 0 auto;
     padding: 10px 10px 170px 10px;
     //gap: 10px;
@@ -41,14 +42,6 @@ const Card = styled.div`
     button {
         cursor: pointer;
     }
-`
-
-const StyledImg = styled.div`
-    width: 280px;
-    height: 170px;
-    //flex-shrink: 1;
-    border-radius: 10px;
-    justify-content: center;
 `
 
 const MainContent = styled.div`
