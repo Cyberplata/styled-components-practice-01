@@ -2,25 +2,28 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import mainPicture from './img/Rectangle.png'
-import {StyledImg} from "./components/StyledImg";
-import {MainContent} from "./components/MainContent";
-import {StyledText} from "./components/StyledText";
-import {ContentBtn, StyledBtn, SuperButton} from "./components/ContentButton";
+import {StyledImgStyled} from "./components/StyledImg.styled";
+import {MainContent} from "./components/MainContent.styled";
+import {StyledTextStyled} from "./components/StyledText.styled";
+import {ContentBtn, StyledBtn, /*SuperButton*/} from "./components/ContentButton.styled";
+import {myTheme} from "./styles/Theme.styled";
 
 function App() {
     return (
         <div className="App">
             <Card>
-                <StyledImg><img src={mainPicture} alt="mainPicture"/></StyledImg>
+                <StyledImgStyled><img src={mainPicture} alt="mainPicture"/></StyledImgStyled>
                 {/*<StyledTitle>Headline</StyledTitle>*/}
                 <MainContent>
                     <h1>Headline</h1>
                 </MainContent>
-                <StyledText>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in
-                    venen.</StyledText>
+                <StyledTextStyled>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in
+                    venen.</StyledTextStyled>
                 <ContentBtn>
+                    <StyledBtn color={"blue"} colorBtnText={"white"} btnType={"primary"}><p>See more</p></StyledBtn>
+                    <StyledBtn color={"red"} colorBtnText={"blue"} btnType={"outlined"}><p>See more</p></StyledBtn>
                     <StyledBtn><p>See more</p></StyledBtn>
-                    <SuperButton><p>Save</p></SuperButton>
+                    {/*<SuperButton><p>Save</p></SuperButton>*/}
                 </ContentBtn>
             </Card>
 
@@ -44,6 +47,10 @@ const Card = styled.div`
 
     button {
         cursor: pointer;
+    }
+    
+    @media ${myTheme.media.tablet} {
+        flex-direction: column;
     }
 `
 

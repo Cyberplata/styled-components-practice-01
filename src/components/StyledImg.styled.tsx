@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledImg = styled.div`
+export const StyledImgStyled = styled.div`
     width: 280px;
     height: 170px;
     //flex-shrink: 1;

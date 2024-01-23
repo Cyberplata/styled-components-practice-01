@@ -1,10 +1,17 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const ContentBtn = styled.div`
     display: flex;
     margin-bottom: 22px;
 `
-export const StyledBtn = styled.button`
+
+type StyledBtnPropsType = {
+    color?: string
+    colorBtnText?: string
+    btnType?: "primary" | "outlined"
+}
+
+export const StyledBtn = styled.button<StyledBtnPropsType>`
     //display: flex;
     //flex-direction: column;
     border: none;
@@ -12,7 +19,7 @@ export const StyledBtn = styled.button`
     width: 86px;
     height: 30px;
     flex-shrink: 0;
-    background-color: #4e71fe;
+    background-color: ${props => props.color || "#7d0fc5"};
     border-radius: 5px;
     margin: 10px;
     //gap: 12px;
@@ -25,7 +32,14 @@ export const StyledBtn = styled.button`
         font-weight: 700;
         line-height: 20px; /* 200% */
     }
+    
+    ${props => props.btnType === "primary" && css<StyledBtnPropsType>`
+        
+    `}
+    
+    
 `
+/*
 export const SuperButton = styled(StyledBtn)`
     border: 2px solid #4E71FE;
     background-color: #fff;
@@ -39,6 +53,6 @@ export const SuperButton = styled(StyledBtn)`
         font-size: 10px;
         font-style: normal;
         font-weight: 700;
-        line-height: 20px; /* 200% */
+        line-height: 20px; /!* 200% *!/
     }
-`
+`*/

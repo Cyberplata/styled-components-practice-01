@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledText = styled.p`
+export const StyledTextStyled = styled.p`
     width: 260px;
     color: #ABB3BA;
     font-family: Inter, serif;
