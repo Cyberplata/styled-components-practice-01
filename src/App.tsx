@@ -21,12 +21,11 @@ function App() {
                     venen.</StyledTextStyled>
                 <ContentBtn>
                     <StyledBtn color={"blue"} colorBtnText={"white"} btnType={"primary"}><p>See more</p></StyledBtn>
-                    <StyledBtn color={"red"} colorBtnText={"blue"} btnType={"outlined"}><p>See more</p></StyledBtn>
-                    <StyledBtn><p>See more</p></StyledBtn>
+                    <StyledBtn color={"blue"} colorBtnText={"blue"} btnType={"outlined"}><p>See more</p></StyledBtn>
+                    {/*<StyledBtn><p>See more</p></StyledBtn>*/}
                     {/*<SuperButton><p>Save</p></SuperButton>*/}
                 </ContentBtn>
             </Card>
-
         </div>
     );
 }

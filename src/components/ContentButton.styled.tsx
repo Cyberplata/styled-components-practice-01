@@ -15,7 +15,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     //display: flex;
     //flex-direction: column;
     border: none;
-    color: #fff;
+    color: ${props => props.color || "#646265"};
     width: 86px;
     height: 30px;
     flex-shrink: 0;
@@ -25,7 +25,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     //gap: 12px;
 
     p {
-        color: #FFF;
+        color: ${props => props.colorBtnText || "#f1f5f1"};;
         font-family: Inter, serif;
         font-size: 10px;
         font-style: normal;
@@ -34,7 +34,12 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     }
     
     ${props => props.btnType === "primary" && css<StyledBtnPropsType>`
-        
+        background-color: ${props => props.color || "fb3f78"};
+    `}
+
+    ${props => props.btnType === "outlined" && css<StyledBtnPropsType>`
+        border: 2px solid ${props => props.color || "fb3f78"};
+        background-color: transparent;
     `}
     
     
